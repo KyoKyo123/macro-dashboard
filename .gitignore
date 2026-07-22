@@ -1,0 +1,12 @@
+.env
+.env.*
+config.py
+*.key
+*.pem
+*.session
+*.db
+deepdive_*.txt
+nohup.out
+__pycache__/
+*.pyc
+.DS_Store
