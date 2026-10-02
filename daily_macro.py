@@ -785,7 +785,7 @@ def fetch_dart(corp_map=None, recent_count=6):
         try:
             q = urllib.parse.urlencode({
                 "crtfc_key": key, "corp_code": corp,
-                "page_count": recent_count, "page_no": 1,
+                "page_count": recent_count, "page_no": 1, "bgn_de": (datetime.now() - timedelta(days=60)).strftime("%Y%m%d"),
             })
             data = _get_json(f"https://opendart.fss.or.kr/api/list.json?{q}")
             if data.get("status") != "000":
